@@ -41,6 +41,24 @@ namespace ProgrammerBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(u => u.IsDeleted).IsRequired();
             builder.Property(u => u.Note).HasMaxLength(500);
             builder.ToTable("Users");
+
+            builder.HasData(new User 
+            {
+                Id=1,
+                RoleId=1,
+                FirstName="Doğukan",
+                LastName="Kazan",
+                Email="kazand25@gmail.com",
+                IsActive=true,
+                IsDeleted=false,
+                CreatedByName="InitialCreate",
+                CreatedDate=DateTime.Now,
+                ModifiedByName="InitialCreate",
+                ModifiedDate=DateTime.Now,
+                Description="İlk admin kullanıcı",
+                Note="Admin kullanıcı",
+                PasswordHash=Encoding.ASCII.GetBytes("21232f297a57a5a743894a0e4a801fc3")//admin
+            });
         }
     }
 }
