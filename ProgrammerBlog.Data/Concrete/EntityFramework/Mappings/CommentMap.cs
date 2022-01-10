@@ -28,6 +28,30 @@ namespace ProgrammerBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Comments");
+
+            builder.HasData(new Comment
+            {
+                Id=1,
+                ArticleId=1,
+                Text="Hello world welcome to programming language by c#",
+                IsActive=true,IsDeleted=false,CreatedByName="InitialCreate",CreatedDate=DateTime.Now,
+                ModifiedByName="InitialCreate",ModifiedDate=DateTime.Now,
+                Note="C#"
+            },
+            new Comment
+            {
+                Id = 2,
+                ArticleId = 1,
+                Text = "Hello world welcome to programming language by java",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "java"
+            }
+            );
         }
     }
 }

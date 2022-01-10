@@ -57,7 +57,8 @@ namespace ProgrammerBlog.Data.Concrete.EntityFramework.Mappings
                 ModifiedDate=DateTime.Now,
                 Description="İlk admin kullanıcı",
                 Note="Admin kullanıcı",
-                PasswordHash=Encoding.ASCII.GetBytes("21232f297a57a5a743894a0e4a801fc3")//admin
+                PasswordHash=Encoding.ASCII.GetBytes("21232f297a57a5a743894a0e4a801fc3"),//admin
+                Picture= "https://e7.pngegg.com/pngimages/1021/858/png-clipart-laptop-computer-icons-computer-monitors-desktop-computers-laptop-black-laptop-computer-illustration-electronics-computer-thumbnail.png"
             });
         }
     }

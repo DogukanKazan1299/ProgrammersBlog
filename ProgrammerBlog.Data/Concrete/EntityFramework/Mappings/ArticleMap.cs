@@ -43,6 +43,70 @@ namespace ProgrammerBlog.Data.Concrete.EntityFramework.Mappings
             //article da bir kategori , bir kategorinin birden fazla article 
             builder.HasOne<User>(a => a.User).WithMany(u => u.Articles).HasForeignKey(a=>a.UserId);
             builder.ToTable("Articles");
+
+            builder.HasData(new Article
+            {
+                Id=1,
+                CategoryId=1,
+                Title="c#",
+                Content="C# derslerine geldiniz",
+                Thumbnail="Default.jpg",
+                SeoDescription="c# yenilikler",
+                SeoTags="C#",
+                SeoAuthor="Doğukan Kazan",
+                Date=DateTime.Now,
+                IsActive=true,IsDeleted=false,CreatedByName="InitialCreate",CreatedDate=DateTime.Now,
+                ModifiedByName="InitialCreate",ModifiedDate=DateTime.Now,
+                Note="C# yenilikler",
+                UserId=1,
+                ViewsCount=100,
+                CommentCount=1
+            },
+            new Article
+            {
+                Id = 2,
+                CategoryId = 1,
+                Title = "java",
+                Content = "java derslerine geldiniz",
+                Thumbnail = "Default.jpg",
+                SeoDescription = "java yenilikler",
+                SeoTags = "java",
+                SeoAuthor = "Doğukan Kazan",
+                Date = DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "java yenilikler",
+                UserId = 1,
+                ViewsCount = 50,
+                CommentCount = 5
+            },
+            new Article
+            {
+                Id = 3,
+                CategoryId = 1,
+                Title = "javascript",
+                Content = "javascript derslerine geldiniz",
+                Thumbnail = "Default.jpg",
+                SeoDescription = "javascript yenilikler",
+                SeoTags = "javascript",
+                SeoAuthor = "Doğukan Kazan",
+                Date = DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "javascript yenilikler",
+                UserId = 1,
+                ViewsCount = 150,
+                CommentCount = 15
+            }
+            );
         }
     }
 }
