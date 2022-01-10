@@ -9,4 +9,9 @@
     <ProjectReference Include="..\ProgrammerBlog.Shared\ProgrammerBlog.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Concrete\EntityFramework\Contexts\" />
+    <Folder Include="Concrete\EntityFramework\Mappings\" />
+  </ItemGroup>
+
 </Project>
