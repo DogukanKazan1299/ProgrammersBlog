@@ -48,6 +48,7 @@ namespace ProgrammerBlog.Data.Concrete.EntityFramework.Mappings
                 RoleId=1,
                 FirstName="Doğukan",
                 LastName="Kazan",
+                UserName="DogukanKazan",
                 Email="kazand25@gmail.com",
                 IsActive=true,
                 IsDeleted=false,
