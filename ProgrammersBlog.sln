@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammerBlog.Entities", "ProgrammerBlog.Entities\ProgrammerBlog.Entities.csproj", "{40A607C8-4853-4840-B2C9-DAE18EBDACF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammerBlog.Entities", "ProgrammerBlog.Entities\ProgrammerBlog.Entities.csproj", "{40A607C8-4853-4840-B2C9-DAE18EBDACF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammerBlog.Data", "ProgrammerBlog.Data\ProgrammerBlog.Data.csproj", "{77E08209-63E7-4777-BB13-961549025DB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammerBlog.Data", "ProgrammerBlog.Data\ProgrammerBlog.Data.csproj", "{77E08209-63E7-4777-BB13-961549025DB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammerBlog.Services", "ProgrammerBlog.Services\ProgrammerBlog.Services.csproj", "{77958980-F292-4705-ADA6-0DD00EC8EF40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammerBlog.Services", "ProgrammerBlog.Services\ProgrammerBlog.Services.csproj", "{77958980-F292-4705-ADA6-0DD00EC8EF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammerBlog.Shared", "ProgrammerBlog.Shared\ProgrammerBlog.Shared.csproj", "{35FEFF0C-B0E3-4D7F-8D73-AFBF406C8B2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammerBlog.Shared", "ProgrammerBlog.Shared\ProgrammerBlog.Shared.csproj", "{35FEFF0C-B0E3-4D7F-8D73-AFBF406C8B2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammerBlog.Mvc", "ProgrammerBlog.Mvc\ProgrammerBlog.Mvc.csproj", "{1172A428-EC6D-4DB9-8621-8CE518D1B4E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammerBlog.Mvc", "ProgrammerBlog.Mvc\ProgrammerBlog.Mvc.csproj", "{1172A428-EC6D-4DB9-8621-8CE518D1B4E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
