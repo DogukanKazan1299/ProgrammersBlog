@@ -5,10 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Concrete\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\ProgrammerBlog.Data\ProgrammerBlog.Data.csproj" />
     <ProjectReference Include="..\ProgrammerBlog.Entities\ProgrammerBlog.Entities.csproj" />
     <ProjectReference Include="..\ProgrammerBlog.Shared\ProgrammerBlog.Shared.csproj" />
   </ItemGroup>
