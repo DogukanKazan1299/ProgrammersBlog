@@ -25,6 +25,8 @@ namespace ProgrammerBlog.Mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();//mvc için deðiþiklikler anlýk frontend de görünsün
+            services.AddAutoMapper(typeof(Startup));//startup taramasý
             services.LoadMyServices();
         }
 
@@ -34,24 +36,30 @@ namespace ProgrammerBlog.Mvc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();//404 ekraný
             }
+            
             else
             {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles();//static dosyalar için
 
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(endpoints =>//proje çalýþmaya baþlayýnca gelecek adres.
             {
-                endpoints.MapRazorPages();
+                endpoints.MapAreaControllerRoute(
+                    name: "Admin",
+                    areaName: "Admin",
+                    pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
+                    );
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
