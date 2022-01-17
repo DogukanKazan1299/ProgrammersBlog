@@ -71,7 +71,7 @@ namespace ProgrammerBlog.Services.Services.Concrete
                     ResultStatus=ResultStatus.Success
                 });
             }
-            return new DataResult<CategoryListDto>(ResultStatus.Error, "Kategori bulunamdı", null);
+            return new DataResult<CategoryListDto>(ResultStatus.Error,"Kategori bulunamdı",null);
         }
 
         public async Task<IDataResult<CategoryListDto>> GetAllByNonDeleted()
