@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProgrammerBlog.Services.AutoMapper.Profiles;
 using ProgrammerBlog.Services.Extensions;
 using System;
 using System.Collections.Generic;
@@ -25,8 +26,12 @@ namespace ProgrammerBlog.Mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            
             services.AddControllersWithViews().AddRazorRuntimeCompilation();//mvc için deðiþiklikler anlýk frontend de görünsün
-            services.AddAutoMapper(typeof(Startup));//startup taramasý
+            //YANLIÞ 
+            //services.AddAutoMapper(typeof(Startup));//startup taramasý
+            services.AddAutoMapper(typeof(CategoryProfile), typeof(ArticleProfile));
+
             services.LoadMyServices();
         }
 
