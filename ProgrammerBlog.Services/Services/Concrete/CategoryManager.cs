@@ -85,7 +85,12 @@ namespace ProgrammerBlog.Services.Services.Concrete
                     ResultStatus=ResultStatus.Success
                 });
             }
-            return new DataResult<CategoryListDto>(ResultStatus.Error, "Kategori bulunamadı", null);
+            return new DataResult<CategoryListDto>(ResultStatus.Error, "Kategori bulunamadı",new CategoryListDto 
+            {
+                Categories=null,
+                ResultStatus=ResultStatus.Error,
+                Message= "Kategori bulunamadı"
+            });
         }
 
         public async Task<IDataResult<CategoryListDto>> GetAllByNonDeletedAndActive()
