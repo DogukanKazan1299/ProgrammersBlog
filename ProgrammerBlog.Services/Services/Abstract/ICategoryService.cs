@@ -15,8 +15,8 @@ namespace ProgrammerBlog.Services.Services.Abstract
         Task<IDataResult<CategoryDto>> Get(int categoryId);
         Task<IDataResult<CategoryListDto>> GetAllByNonDeleted();//silinmeyen kategorileri getir.
         Task<IDataResult<CategoryListDto>> GetAllByNonDeletedAndActive();
-        Task<IResult> Add(CategoryAddDto categoryAddDto,string createdByName);
-        Task<IResult> Update(CategoryUpdateDto categoryUpdateDto,string modifiedByName);
+        Task<IDataResult<CategoryDto>> Add(CategoryAddDto categoryAddDto,string createdByName);
+        Task<IDataResult<CategoryDto>> Update(CategoryUpdateDto categoryUpdateDto,string modifiedByName);
         Task<IResult> Delete(int categoryId, string modifiedByName);
         Task<IResult> HardDelete(int categoryId);
     }
