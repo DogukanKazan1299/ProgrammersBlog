@@ -9,6 +9,7 @@ using ProgrammerBlog.Services.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ProgrammerBlog.Mvc
@@ -26,8 +27,12 @@ namespace ProgrammerBlog.Mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();//mvc için deðiþiklikler anlýk frontend de görünsün
+            //mvc için deðiþiklikler anlýk frontend de görünsün
+            services.AddControllersWithViews().AddRazorRuntimeCompilation().AddJsonOptions(opt=> 
+            {
+                opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+            });
             //YANLIÞ 
             //services.AddAutoMapper(typeof(Startup));//startup taramasý
             services.AddAutoMapper(typeof(CategoryProfile), typeof(ArticleProfile));
